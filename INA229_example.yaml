@@ -1,0 +1,30 @@
+spi:
+  clk_pin: GPIO14
+  mosi_pin: GPIO13
+  miso_pin: GPIO12
+  
+ina229:
+  cs_pin: GPIO15
+  spi_id: spi_bus
+  current_lsb: 0.0001
+  shunt_resistance: 0.1
+  bus_voltage_range: 32V
+  shunt_voltage_range: 320mV
+  calibration: 0x7FFF
+  mode: shunt_and_bus_continuous
+  average: 1024
+  vbus_conversion_time: 140us
+  vshunt_conversion_time: 140us
+  conversion_time: 140us
+
+sensor:
+  - platform: ina229
+    current:
+      name: "INA229 Current"
+      unit_of_measurement: "A"
+    voltage:
+      name: "INA229 Voltage"
+      unit_of_measurement: "V"
+    power:
+      name: "INA229 Power"
+      unit_of_measurement: "W"
