@@ -18,6 +18,9 @@ https://github.com/esphome/esphome/tree/dev/esphome/components/ina219
 tables of registers stolen from:
 https://github.com/XRay3D/INA229/blob/master/ina229/ina229.cpp
 
+other resources:
+https://github.com/vdbxio/ina237
+https://github.com/ssieb/custom_components/tree/master
 */
 
 #include "esphome/core/log.h"
